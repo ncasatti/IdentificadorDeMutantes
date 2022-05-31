@@ -1,26 +1,47 @@
 public class Main {
     public static void main(String[] args) {
 
-        String[] testDna = {
-                "ATGCGA",
-                "CAGTGC",
+        String[] testDnaRow = {
+                "ATGCTA",
+                "CGGTGC",
                 "TTATGT",
                 "AGAAGG",
                 "CCCCTA",
                 "TCACTG"
         };
 
-        String[] testDna2 = {
+        String[] testDnaColumn = {
                 "ATGCGA",
-                "CAGTGC",
+                "CGGTGC",
                 "TTATGT",
                 "AGAAGG",
-                "CCCCTA",
+                "CATCTA",
                 "TCACTG"
         };
 
-        boolean mutant = isMutant(testDna);
-        System.out.println("IsMutant: " + mutant);
+        String[] testDnaOblique = {
+                "ATGCGA",
+                "CAGTCC",
+                "TTATGT",
+                "AGAAGG",
+                "CCCTTA",
+                "TCACTG"
+        };
+
+        String[] testDnaInvalid = {
+                "ATRCGA",
+                "CAGTGC",
+                "TTATGT",
+                "AGAAGG",
+                "CCCSTA",
+                "TCACTG"
+        };
+
+
+        System.out.println("IsMutant: " + isMutant(testDnaRow));
+        System.out.println("IsMutant: " + isMutant(testDnaColumn));
+        System.out.println("IsMutant: " + isMutant(testDnaOblique));
+        System.out.println("IsMutant: " + isMutant(testDnaInvalid));
     }
 
     private static boolean isMutant(String[] dna){
